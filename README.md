@@ -33,33 +33,33 @@ Age: The patient's age at diagnosis.
 
 Gender: Categorized as Male or Female.
 
-Smoking & Smoking History: Indicates smoking status and history (Never, Former, Current).
+Smoking & Smoking History: Indicates smoking status and history (Yes/No).
 
 Radiotherapy History: Whether the patient has undergone radiotherapy (Yes/No).
 
-Thyroid Function: The patient’s thyroid function status (Normal, Hypo, Hyper).
+Thyroid Function: The patient’s thyroid function status.
 
-Physical Examination: Results of the clinical examination (Normal/Abnormal).
+Physical Examination: Results of the clinical examination.
 
-Adenopathy: Presence of swollen lymph nodes (Present/Absent).
+Adenopathy: Presence of swollen lymph nodes.
 
-Pathology: Classification of the tumor as Benign or Malignant.
+Pathology: Classification of the tumor.
 
 Focality: Whether the cancer is Unifocal or Multifocal.
 
-Risk Level: Risk assessment of the cancer (Low, Moderate, High).
+Risk Level: Risk assessment of the cancer..
 
 TNM Staging:
 
-T (Tumor Stage): Tumor size classification (0-4).
+T (Tumor Stage): Tumor size classification.
 
-N (Node Stage): Lymph node involvement (0-3).
+N (Node Stage): Lymph node involvement.
 
-M (Metastasis): Presence of distant metastasis (0-1).
+M (Metastasis): Presence of distant metastasis.
 
 Stage: Overall stage of the cancer (I, II, III, IV).
 
-Response to Treatment: Indicates if the patient had Complete, Partial, or No Response.
+Response to Treatment:
 
 Recurred: The target variable, indicating whether the cancer has recurred (Yes/No).
 
