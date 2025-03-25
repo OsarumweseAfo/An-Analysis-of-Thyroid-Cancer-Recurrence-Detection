@@ -1,14 +1,14 @@
 # Project Overview: Thyroid Cancer Recurrence Prediction
 
 ## Title:
-A Comprehensive Analysis and Machine Learning Prediction of Thyroid Cancer Recurrence with Deployment
+### A Comprehensive Analysis and Machine Learning Prediction of Thyroid Cancer Recurrence with Deployment
 
 ## Objective
 Thyroid cancer recurrence is a significant concern in clinical decision-making. Accurately predicting recurrence can help improve patient outcomes and guide treatment strategies. This project aims to:
 
-*Analyze patient data to identify factors influencing thyroid cancer recurrence.
-*Build machine learning models to predict the likelihood of recurrence based on patient demographics, medical history, and tumor characteristics.
-*Deploy an interactive web application using Streamlit to allow real-time prediction of recurrence based on user input.
+* Analyze patient data to identify factors influencing thyroid cancer recurrence.
+* Build machine learning models to predict the likelihood of recurrence based on patient demographics, medical history, and tumor characteristics.
+* Deploy an interactive web application using Streamlit to allow real-time prediction of recurrence based on user input.
 
 ## Scope
 ### Data Collection and Preprocessing
