@@ -21,16 +21,19 @@ age = st.number_input("Age", min_value=10, value=95)
 categorical_features = {
     "Gender": ["Male", "Female"],
     "Smoking": ["Yes", "No"],
-    "SmokingHistory": ["Never", "Former", "Current"],
+    "SmokingHistory": ["Yes", "No"],
     "RadiotherapyHistory": ["Yes", "No"],
-    "ThyroidFunction": ["Normal", "Hypo", "Hyper"],
-    "PhysicalExamination": ["Normal", "Abnormal"],
-    "Adenopathy": ["Present", "Absent"],
-    "Pathology": ["Benign", "Malignant"],
+    "ThyroidFunction": ["Euthyroid", "Clinical Hyperthyroidism", "Clinical Hypothyroidism", "Subclinical Hyperthyroidism", "Subclinical Hypothyroidism"],
+    "PhysicalExamination": ["Single nodular goiter-left", "Multinodular goiter", "Single nodular goiter-right", "Normal", "Diffuse goiter"],
+    "Adenopathy": ["Right", "Left", "Bilateral", "Extensive", "No"],
+    "Pathology": ["Micropapillary", "Papillary", "Follicular", "Hurthel cell"],
     "Focality": ["Unifocal", "Multifocal"],
-    "Risk": ["Low", "Moderate", "High"],
-    "Stage": ["I", "II", "III", "IV"],
-    "Response": ["Complete", "Partial", "None"]
+    "Risk": ["Low", "Intermediate", "High"],
+    "Tumor":["T1a", "T1b", "T2","T3a", "T3b", "T4a"],
+    "Node": ["N1b", "NO", "N1A"],
+    "Metasis": ["M0", "M1"],
+    "Stage": ["I", "II", "III", "IVA", "IVB"],
+    "Response": ["Structural Incomplete", "Biochemical Incomplete", "Excellent", "Indeterminate"]
 }
 
 # Function to apply Label Encoding
@@ -49,14 +52,12 @@ adenopathy_val = encode_input("Adenopathy", st.selectbox("Adenopathy", categoric
 pathology_val = encode_input("Pathology", st.selectbox("Pathology", categorical_features["Pathology"]))
 focality_val = encode_input("Focality", st.selectbox("Focality", categorical_features["Focality"]))
 risk_val = encode_input("Risk", st.selectbox("Risk Level", categorical_features["Risk"]))
+T = encode_input("Tumor", st.selectbox("Tumor (T)", categorical_features["Tumor"]))
+N = encode_input("Node", st.selectbox("Node (N)", categorical_features["Node"]))
+M = encode_input("Metasis", st.selectbox("Metastasis (M)", categorical_features["Metasis"]))
 stage_val = encode_input("Stage", st.selectbox("Overall Stage", categorical_features["Stage"]))
 response_val = encode_input("Response", st.selectbox("Response to Treatment", categorical_features["Response"]))
 
-
-# Numeric inputs
-T = st.number_input("T Stage", min_value=0, max_value=4, value=1)
-N = st.number_input("N Stage", min_value=0, max_value=3, value=0)
-M = st.number_input("M Stage", min_value=0, max_value=1, value=0)
 
 # Prepare input features
 input_features = np.array([[age, gender_val, smoking_val, smoking_history_val, radiotherapy_val,
@@ -71,6 +72,6 @@ if st.button("Predict Thyroid Cancer Recurrence"):
     # Convert prediction (0 or 1) into "Yes" or "No"
     result = "Yes" if prediction[0] == 1 else "No"
 
-    st.write(f"Predicted Thyroid Cancer Recurrence: {result}**")
+    st.write(f"Predicted Thyroid Cancer Recurrence: {result}")
 
 
